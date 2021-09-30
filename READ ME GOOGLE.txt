@@ -1,0 +1,1 @@
+Replace the text variable with the string you want to perform sentiment analysis on.
