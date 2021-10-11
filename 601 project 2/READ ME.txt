@@ -1,0 +1,13 @@
+AUTHOR: David Shi
+
+First change the following in Twitter_Module.py:
+
+consumer_key, consumer_secret, access_key, access_secret.
+
+Change the global path of GOOGLE_AUTHENTICATION_CREDENTIALS to the Google api key json file using the following command:
+
+export GOOGLE_AUTHENTICATION_CREDENTIALS="path"
+
+Then run the following command:
+
+python3 sentiment.py
