@@ -5,13 +5,6 @@ from IPython.display import display
 import pandas
 from social_media_module import Social_Media_Module
 
-consumer_key = ""
-consumer_secret = ""
-access_key = ""
-access_secret = ""
-
-callback_uri = 'oob'
-
 class Twitter_Module(Social_Media_Module):
     c_key = None
     c_secret = None
@@ -28,8 +21,8 @@ class Twitter_Module(Social_Media_Module):
         self.uri = callback_uri
 
     def getText(self):
-        auth = tweepy.OAuthHandler(consumer_key, consumer_secret, callback_uri)
-        auth.set_access_token(access_key, access_secret)
+        auth = tweepy.OAuthHandler(self.c_key, self.c_secret, self.uri)
+        auth.set_access_token(self.a_key, self.a_secret)
         api = tweepy.API(auth)
         my_timeline = api.home_timeline()
         data = []
